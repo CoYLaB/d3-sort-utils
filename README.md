@@ -1,1 +1,1 @@
-# d3-sort-util
+# d3-sort-utils
