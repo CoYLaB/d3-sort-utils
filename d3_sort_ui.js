@@ -98,6 +98,9 @@ async function controllerAction(action) {
 
 	console.log("[controllerAction] " + action);
 	switch(action) {
+		case "toggle_debug":
+			console.log("Debug toggled");
+			break;
 		case "algo":
 			if (leftRadio.checked) {
 				algorithmSort    = leftAction;
