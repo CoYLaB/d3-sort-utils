@@ -178,7 +178,19 @@ function restartSort() {
 }
 
 function configureLogging() {
-	console.group("[configureLogging]");
-	if (debug)
-	console.groupEnd("[configureLogging]");
+	if (debugToggle_status == "off") {
+		console.group("[configureLogging]");
+		console.log("Turning off logging");
+		console.groupEnd("[configureLogging]");
+		// Save default console.log, console.group & console.groupEnd functions
+		original_console_log      = console.log;
+		original_console_group    = console.group;
+		original_console_groupEnd = console.groupEnd;
+		// Overwrites default console.log, console.group & console.groupEnd functions
+		console.log = () => {};
+	}
+	else {
+		// Restore functions console.log, console.group & console.groupEnd
+		
+	}
 }
