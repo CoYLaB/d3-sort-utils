@@ -176,3 +176,9 @@ function restartSort() {
 	resetCounters();
 	console.groupEnd("[restartSort]");
 }
+
+function configureLogging() {
+	console.group("[configureLogging]");
+	if (debug)
+	console.groupEnd("[configureLogging]");
+}
