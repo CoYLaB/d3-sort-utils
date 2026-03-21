@@ -33,6 +33,7 @@ function getClosest(arr, val) {
 function configureUI(algoConfig) {
 	console.log("[configureUI]");
 
+	debugToggle  = document.querySelector("#debugToggle");
 	startButton  = document.querySelector("#start");
 	randomButton = document.querySelector("#random");
 
@@ -51,6 +52,7 @@ function configureUI(algoConfig) {
 	scanSlider.value      = document.querySelector("#scanValue").value      = scanDelay;
 	animationSlider.value = document.querySelector("#animationValue").value = animationDelay;
 
+	debugToggle.addEventListener("change",		() => controlAction("toggle_debug"));
 	barsSlider.addEventListener("change",       () => controllerAction("slider_bar"));
 	scanSlider.addEventListener("change",       () => controllerAction("slider_scan"));
 	animationSlider.addEventListener("change",  () => controllerAction("slider_transition"));
