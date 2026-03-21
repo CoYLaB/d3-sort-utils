@@ -1,4 +1,5 @@
 // Controller Status
+var debugToggle_status = "off";
 var startButton_status = "start";
 var startButton, randomButton;
 
