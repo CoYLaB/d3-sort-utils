@@ -53,7 +53,7 @@ function configureUI(algoConfig) {
 	scanSlider.value      = document.querySelector("#scanValue").value      = scanDelay;
 	animationSlider.value = document.querySelector("#animationValue").value = animationDelay;
 
-	debugToggle.addEventListener("change",		() => controlAction("toggle_debug"));
+	debugToggle.addEventListener("change",		() => controllerAction("toggle_debug"));
 	barsSlider.addEventListener("change",       () => controllerAction("slider_bar"));
 	scanSlider.addEventListener("change",       () => controllerAction("slider_scan"));
 	animationSlider.addEventListener("change",  () => controllerAction("slider_transition"));
