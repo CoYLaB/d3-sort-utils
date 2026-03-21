@@ -99,7 +99,10 @@ async function controllerAction(action) {
 	console.log("[controllerAction] " + action);
 	switch(action) {
 		case "toggle_debug":
-			console.log("Debug toggled");
+			if (debugToggle_status == "off")
+				debugToggle_status = "on";
+			else
+				debugToggle_status = "of";				
 			break;
 		case "algo":
 			if (leftRadio.checked) {
