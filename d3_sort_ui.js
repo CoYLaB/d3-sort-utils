@@ -105,9 +105,11 @@ async function controllerAction(action) {
 				console.log = original_console_log;
 				console.group = original_console_group;
 				console.groupEnd = original_console_groupEnd;
+				console.log("[controllerAction] Restoring console logging");
 			}
 			else {
 				debugToggle_status = "off";
+				console.log("[controllerAction] Turning off console logging");
 				// Overwrites default console.log, console.group & console.groupEnd functions
 				console.log      = () => {};
 				console.group    = () => {};
