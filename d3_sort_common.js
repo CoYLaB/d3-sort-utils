@@ -10,7 +10,7 @@ var timerStart, countComparisons, countSwaps, countReads, countWrites, countAcce
 var algorithmSort;
 
 // Default Console Logging Functions
-var original_console_log, original_console_group, original_console_groupEnd;
+var original_console_log, original_console_group, original_console_groupEnd, original_groupCollapsed;
 
 function sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
@@ -185,9 +185,10 @@ function configureLogging() {
 	console.log("Turning off console logging");
 	console.groupEnd("[configureLogging]");
 	// Save default console.log, console.group & console.groupEnd functions
-	original_console_log      = console.log;
-	original_console_group    = console.group;
-	original_console_groupEnd = console.groupEnd;
+	original_console_log            = console.log;
+	original_console_group          = console.group;
+	original_console_groupEnd       = console.groupEnd;
+	original_console_groupCollapsed = console.groupCollapsed;
 	// Overwrites default console.log, console.group & console.groupEnd functions
 	console.log      = () => {};
 	console.group    = () => {};
