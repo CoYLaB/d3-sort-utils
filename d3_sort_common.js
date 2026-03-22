@@ -7,7 +7,10 @@ const counterFrequency = 10;
 var timerStart, countComparisons, countSwaps, countReads, countWrites, countAccesses;
 
 // Sort Algorithm Function
-var algorithmSort; 
+var algorithmSort;
+
+// Default Console Logging Functions
+var original_console_log, original_console_group, original_console_groupEnd;
 
 function sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
@@ -178,19 +181,15 @@ function restartSort() {
 }
 
 function configureLogging() {
-	if (debugToggle_status == "off") {
-		console.group("[configureLogging]");
-		console.log("Turning off logging");
-		console.groupEnd("[configureLogging]");
-		// Save default console.log, console.group & console.groupEnd functions
-		original_console_log      = console.log;
-		original_console_group    = console.group;
-		original_console_groupEnd = console.groupEnd;
-		// Overwrites default console.log, console.group & console.groupEnd functions
-		console.log = () => {};
-	}
-	else {
-		// Restore functions console.log, console.group & console.groupEnd
-		
-	}
+	console.group("[configureLogging]");
+	console.log("Turning off logging");
+	console.groupEnd("[configureLogging]");
+	// Save default console.log, console.group & console.groupEnd functions
+	original_console_log      = console.log;
+	original_console_group    = console.group;
+	original_console_groupEnd = console.groupEnd;
+	// Overwrites default console.log, console.group & console.groupEnd functions
+	console.log      = () => {};
+	console.group    = () => {};
+	console.groupEnd = () => {};
 }
