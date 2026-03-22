@@ -101,8 +101,16 @@ async function controllerAction(action) {
 		case "toggle_debug":
 			if (debugToggle_status == "off")
 				debugToggle_status = "on";
+				// Restore default console.log, console.group & console.groupEnd functions
+				console.log = original_console_log;
+				console.group = original_console_group;
+				console.groupEnd = original_console_groupEnd;
 			else
-				debugToggle_status = "of";				
+				debugToggle_status = "off";
+				// Overwrites default console.log, console.group & console.groupEnd functions
+				console.log      = () => {};
+				console.group    = () => {};
+				console.groupEnd = () => {};
 			break;
 		case "algo":
 			if (leftRadio.checked) {
