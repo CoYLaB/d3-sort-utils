@@ -182,7 +182,7 @@ function restartSort() {
 
 function configureLogging() {
 	console.group("[configureLogging]");
-	console.log("Turning off logging");
+	console.log("Turning off console logging");
 	console.groupEnd("[configureLogging]");
 	// Save default console.log, console.group & console.groupEnd functions
 	original_console_log      = console.log;
