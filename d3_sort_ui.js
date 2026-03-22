@@ -102,18 +102,21 @@ async function controllerAction(action) {
 			if (debugToggle_status == "off") {
 				debugToggle_status = "on";
 				// Restore default console.log, console.group & console.groupEnd functions
-				console.log = original_console_log;
-				console.group = original_console_group;
-				console.groupEnd = original_console_groupEnd;
+				console.log            = original_console_log;
+				console.group          = original_console_group;
+				console.groupEnd       = original_console_groupEnd;
+				console.groupCollapsed = original_console_groupCollapsed;
+
 				console.log("[controllerAction] Restoring console logging");
 			}
 			else {
 				debugToggle_status = "off";
 				console.log("[controllerAction] Turning off console logging");
 				// Overwrites default console.log, console.group & console.groupEnd functions
-				console.log      = () => {};
-				console.group    = () => {};
-				console.groupEnd = () => {};
+				console.log            = () => {};
+				console.group          = () => {};
+				console.groupEnd       = () => {};
+				console.groupCollapsed = () => {};
 			}
 			break;
 		case "algo":
