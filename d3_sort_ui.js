@@ -83,14 +83,14 @@ function configureUI(algoConfig) {
 }
 
 function startUI() {
-	console.group("[StartUI]");
+	console.group("[startUI]");
 
 	createSVG();
 	configureScales();
 	generateBars(noData);
 	displayBars();
 
-	console.groupEnd("[StartUI]");
+	console.groupEnd("[startUI]");
 }
 
 async function controllerAction(action) {
