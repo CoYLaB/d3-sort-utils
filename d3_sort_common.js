@@ -190,7 +190,8 @@ function configureLogging() {
 	original_console_groupEnd       = console.groupEnd;
 	original_console_groupCollapsed = console.groupCollapsed;
 	// Overwrites default console.log, console.group & console.groupEnd functions
-	console.log      = () => {};
-	console.group    = () => {};
-	console.groupEnd = () => {};
+	console.log            = () => {};
+	console.group          = () => {};
+	console.groupEnd       = () => {};
+	console.groupCollapsed = () => {};
 }
