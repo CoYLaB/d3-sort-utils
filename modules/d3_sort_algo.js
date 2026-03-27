@@ -1,9 +1,9 @@
 export { lowestExchangeSort, highestExchangeSort };
 
 async function lowestExchangeSort() {
-  var j;
+  var j, value;
 
-  for (var i=1; i<noData; i++) {
+  for (let i=1; i<noData; i++) {
 
     if (startButton_status == "waiting") {
       console.log("[lowestExchangeSort] Stop Buttom Clicked: Exiting");
@@ -43,9 +43,9 @@ async function lowestExchangeSort() {
 }
 
 async function highestExchangeSort() {
-  var j;
+  var j, value;
 
-  for (var i=noData-2; i>=0; i--) {
+  for (let i=noData-2; i>=0; i--) {
 
     if (startButton_status == "waiting") {
       console.log("[highestExchangeSort] Stop Buttom Clicked: Exiting");
@@ -83,4 +83,3 @@ async function highestExchangeSort() {
     console.log("[highestExchangeSort] After swap dataset:" + dataset);				
   }
 }
-
