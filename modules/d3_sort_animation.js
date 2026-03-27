@@ -1,3 +1,5 @@
+export { highlightColourBar, swapBars, waitAnimationEnd };
+
 // SVG Data
 var svg, xScale, yScale;
 
