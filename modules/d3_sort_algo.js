@@ -1,4 +1,4 @@
-export { lowestExchangeSort, highestExchangeSort };
+//export { lowestExchangeSort, highestExchangeSort };
 
 export async function lowestExchangeSort() {
   var j;
