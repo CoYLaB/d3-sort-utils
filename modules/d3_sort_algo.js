@@ -1,6 +1,6 @@
 export { lowestExchangeSort, highestExchangeSort };
 
-export async function lowestExchangeSort() {
+async function lowestExchangeSort() {
   var j;
 
   for (var i=1; i<noData; i++) {
@@ -42,7 +42,7 @@ export async function lowestExchangeSort() {
   }
 }
 
-export async function highestExchangeSort() {
+async function highestExchangeSort() {
   var j;
 
   for (var i=noData-2; i>=0; i--) {
