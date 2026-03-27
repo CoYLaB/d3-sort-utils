@@ -1,6 +1,6 @@
 export { lowestExchangeSort, highestExchangeSort };
 
-import { highlightColourBar, swapBars, waitAnimationEnd } from "./d3_sort_animation.js";	
+import { highlightColourBar, swapBars, waitAnimationEnd } from "d3_sort_animation.js";	
 
 async function lowestExchangeSort() {
   var j, value;
